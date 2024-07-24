@@ -1,0 +1,98 @@
+body,
+html {
+  height: 100vh;
+  margin: 0px;
+  background-color: rgb(36, 39, 58);
+}
+
+header {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(24, 25, 38);
+  box-shadow: 0px 0px 10px 2px rgba(24, 25, 38, 0.8);
+  #headertitle {
+    font-size: 5rem;
+    color: rgb(166, 218, 149);
+    margin: 30px 100px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  #scoreboard {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+
+    .scorecard {
+      display: flex;
+      font-size: 3rem;
+      color: rgb(166, 218, 149);
+    }
+    .scorecard-points {
+      margin-left: 30px;
+    }
+  }
+  #game {
+    margin-top: 100px;
+    height: 600px;
+    width: 600px;
+    align-self: center;
+    /* background-color: rgb(198, 160, 246); */
+    background-color: rgb(244, 219, 214);
+    #gamearea {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      /* background-color: rgb(36, 39, 58); */
+    }
+    .gamecell {
+      background-color: rgb(36, 39, 58);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5rem;
+      user-select: none;
+      color: rgb(166, 218, 149);
+      img {
+        height: 80%;
+        width: 80%;
+        filter: invert(20%) sepia(35%) saturate(685%) hue-rotate(58deg)
+          brightness(100%) contrast(60%);
+      }
+      img[src="./svg/circle.svg"] {
+        height: 63%;
+        width: auto;
+      }
+    }
+  }
+}
+
+dialog {
+  background-color: rgb(24, 25, 38);
+  border: 3px solid rgb(244, 219, 214);
+  border-radius: 5px;
+  div {
+    margin: auto;
+    outline: none;
+    /* height: 200px;
+    width: 600px; */
+    p {
+      padding: 50px;
+      height: 250px;
+      width: 600px;
+      color: rgb(166, 218, 149);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      font-size: 5rem;
+      user-select: none;
+    }
+  }
+}
