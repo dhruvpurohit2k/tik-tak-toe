@@ -1,68 +1,3 @@
-
-
-// player1.classList.add("active");
-
-// function winning(cells, player) {
-//   if (
-//     (cells[0] == player && cells[1] == player && cells[2] == player) ||
-//     (cells[3] == player && cells[4] == player && cells[5] == player) ||
-//     (cells[6] == player && cells[7] == player && cells[8] == player) ||
-//     (cells[0] == player && cells[3] == player && cells[6] == player) ||
-//     (cells[1] == player && cells[4] == player && cells[7] == player) ||
-//     (cells[2] == player && cells[5] == player && cells[8] == player) ||
-//     (cells[0] == player && cells[4] == player && cells[8] == player) ||
-//     (cells[2] == player && cells[4] == player && cells[6] == player)
-//   ) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-// function resetBoard() {
-//   gameCellsArray.forEach((ele, index) => {
-//     ele.innerHTML = "";
-//     cells[index] = index;
-//   })
-//   console.log(cells);
-// }
-
-// function cellClicked(ele, index) {
-//   if (cells[index] == player || cells[index] == bot) {
-//     return;
-//   }
-//   if (playerPlaying) {
-//     ele.appendChild(playericon.cloneNode(true));
-//     cells[index] = player;
-//     movesremaining--;
-//     playerPlaying = !playerPlaying;
-//     player1.classList.remove("active");
-//     player2.classList.add("active");
-//   } else {
-//     ele.appendChild(boticon.cloneNode(true));
-//     cells[index] = bot;
-//     movesremaining--;
-//     playerPlaying = !playerPlaying;
-//     player2.classList.remove("active");
-//     player1.classList.add("active");
-//   }
-//   if (winning(cells, player)) {
-//     winEvent('player');
-//   }
-//   else if (winning(cells, bot)) {
-//     winEvent('bot');
-//   }
-//   if (movesremaining == 0) {
-//     drawFlag = true;
-//     winEvent('tie');
-
-//   }
-// }
-
-
-
-
-
 let Game = (function () {
   let board;
   let player1Score;
@@ -197,6 +132,5 @@ let gameCellsArray = document.querySelectorAll(".gamecell");
 let player1 = document.querySelectorAll(".scorecard")[0];
 let player2 = document.querySelectorAll(".scorecard")[1];
 let winmodal = document.querySelector("dialog");
-console.log(player1, player2);
 Game.setupGame(gameCellsArray, player1, player2, winmodal);
 Game.start();
